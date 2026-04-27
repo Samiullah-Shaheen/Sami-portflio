@@ -1,0 +1,103 @@
+:root {
+  /* ===== Modern Colors (2025 style) ===== */
+  --clr-primary: #472c1c; /* Indigo Neon */
+  --clr-secondary: #f7f2f0; /* Cyan Glow */
+  --clr-accent: #fdfee7; /* Fresh Green */
+  --clr-main: #fcfcfc; /* Soft Light */
+  --clr-gr-light: #b3c919;
+  --clr-guld: #e4bf2a;
+  --black: #000000;
+  --radius: 0.5rem;
+  --gray: #7a7e85;
+  --bluelight: #034260;
+  --gray-100: #f2f2f3;
+}
+/*------------------------------------------------------------*\
+ * #======================= About part ======================== |
+\*------------------------------------------------------------*/
+.aboutContianer {
+  width: 100%;
+  background-color: var(--clr-secondary);
+  padding: 2rem 0;
+}
+.subtitle {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 70px;
+  color: var(--clr-primary);
+}
+.subtitle span {
+  color: var(--bluelight);
+}
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.about-img {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image2 {
+  width: 450px;
+  height: 450px;
+  border: 12px solid var(--clr-primary);
+  background-image: url(/public/images/s3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 60px var(--clr-primary);
+}
+.about-text {
+  width: 50%;
+  padding: 2rem;
+}
+
+.about-text h4 {
+  font-size: 29px;
+  color: var(--clr-primary);
+  margin: 15px 0 30px;
+  font-weight: 700;
+}
+.about-text p {
+  font-size: 20px;
+  color: var(--clr-primary);
+  margin-bottom: 4rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .aboutContianer {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 0rem;
+    padding-bottom: 6rem;
+    padding: 1rem 2rem;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-img {
+    width: 100%;
+    height: auto;
+  }
+  .image2 {
+    width: 250px; /* Smaller width on mobile */
+    height: 250px;
+  }
+  .about-text {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+}

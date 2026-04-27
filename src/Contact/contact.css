@@ -1,0 +1,216 @@
+:root {
+  /* ===== Modern Colors (2025 style) ===== */
+  --clr-primary: #472c1c;
+  --clr-primary2: #734c36;
+  --clr-secondary: #f7f2f0;
+  --clr-secondary2: #eae1dd;
+  --clr-accent: #fdfee7; /* Fresh Green */
+  --clr-main: #fcfcfc; /* Soft Light */
+  --clr-gr-light: #b3c919;
+  --clr-guld: #e4bf2a;
+  --black: #000000;
+  --radius: 0.5rem;
+  --gray: #7a7e85;
+  --bluelight: #034260;
+  --bluky: #3888ad;
+  --gray-100: #f2f2f3;
+}
+a {
+  text-decoration: none;
+
+  /**
+   * shadow
+   */
+
+  --shadow: 0 -5px 10px var(--manatee);
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.05s ease;
+  --transition-2: 0.25s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+}
+/*------------------------------------------------------------*\
+ * #====================== contact part ===================== |
+\*------------------------------------------------------------*/
+.contact {
+  padding: 40px 80px;
+  display: flex;
+}
+
+.contact-content {
+  margin-bottom: 50px;
+}
+.section-title {
+  color: var(--clr-primary);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.contact-item-title {
+  color: var(--clr-primary);
+}
+
+.contact-item-icon {
+  font-size: 25px;
+  color: var(--bluelight);
+}
+
+.contact-item-icon i {
+  --ionicon-stroke-width: 40px;
+  color: var(--bluelight);
+}
+
+.contact-item-title {
+  margin-bottom: 10px;
+}
+
+.contact-list-item .contact-info {
+  color: var(--clr-primary);
+  font-style: normal;
+  line-height: 1.6;
+  transition: var(--transition-1);
+}
+
+.contact-info:not(address):is(:hover, :focus) {
+  color: var(--clr-primary2);
+}
+
+.contac-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding-inline: 40px;
+}
+
+.contact-social-link {
+  position: relative;
+  color: var(--bluelight);
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--bluelight);
+  transition: var(--transition-1);
+}
+
+.contact-social-link:is(:hover, :focus) {
+  background: var(--aqua);
+  color: var(--bluelight);
+  box-shadow: 0 0 20px var(--bluky);
+}
+
+.contact-social-link:is(:hover, :focus) .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.contact-form {
+  width: 50%;
+  background: var(--clr-secondary);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-1);
+}
+
+.form-wrapper {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  color: var(--clr-primary);
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  background: var(--clr-secondary2);
+  border: none;
+  color: var(--clr-primary);
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 12px;
+  transition: var(--transition-1);
+}
+
+.input-wrapper ion-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--color-secondary);
+  font-size: 20px;
+  transition: var(--transition-1);
+}
+
+textarea.input-field {
+  min-height: 60px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+.input-field:focus {
+  outline: 1px solid;
+}
+
+.input-field:focus + ion-icon {
+  color: var(--raw-seinna);
+}
+
+.contact .btn-primary {
+  max-width: unset;
+  width: 100%;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  background: var(--bluelight);
+  color: var(--clr-main);
+  border: none;
+  border-radius: 40px;
+}
+.contact .btn-primary:hover {
+  box-shadow:
+    0 0 5px var(--bluky),
+    0 0 25px var(--bluky),
+    0 0 50px var(--bluky),
+    0 0 100px var(--bluky),
+    0 0 200px var(--bluky);
+}
+@media (max-width: 480px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+    justify-content: space-around;
+  }
+
+  .contact-content {
+    margin-bottom: 0;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-list {
+    margin-left: -40px;
+  }
+}

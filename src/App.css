@@ -1,38 +1,92 @@
-.App {
+:root {
+  /* ===== Modern Colors (2025 style) ===== */
+  --clr-primary: #472c1c; /* Indigo Neon */
+  --clr-secondary: #f7f2f0; /* Cyan Glow */
+  --clr-accent: #fdfee7; /* Fresh Green */
+  --clr-main: #fcfcfc; /* Soft Light */
+  --clr-gr-light: #b3c919;
+  --clr-guld: #e4bf2a;
+  --black: #000000;
+  --radius: 0.5rem;
+  --gray: #7a7e85;
+  --bluelight: #034260;
+  --gray-100: #f2f2f3;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--clr-secondary);
+}
+
+/* service================ */
+.service {
+  height: 100vh;
+  width: 100%;
+  color: var(--clr-primary);
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem;
+  background-color: var(--clr-secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .service {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 2rem !important;
+  }
+}
+
+/* service================ */
+.myprojects {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.pro-subtitle {
+  color: var(--bluelight);
+  font-weight: 700;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.proTitle {
+  color: var(--clr-primary);
+  font-weight: bolder;
+  font-size: 3rem;
+  text-align: center;
 }
+/* project ================ */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .myprojects {
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .row1 {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Skills  ================ */
+@media (max-width: 768px) {
+  .myskills {
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 }
